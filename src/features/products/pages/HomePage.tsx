@@ -13,7 +13,7 @@ export function HomePage() {
 
   return (
     <>
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-8 md:grid-cols-[1.1fr_0.9fr] md:items-end md:py-14">
+      <section className="mx-auto grid max-w-6xl gap-8 px-5 py-8 md:grid-cols-[minmax(0,1fr)_minmax(300px,0.72fr)] md:items-center md:py-14 lg:gap-12">
         <div className="relative min-h-[520px] overflow-hidden bg-[#e9e3d8]">
           <img
             alt="Nouve seasonal minimalwear campaign"
@@ -21,19 +21,19 @@ export function HomePage() {
             src="/assets/nouve/hero/hero-seasonal-minimalwear-01.png"
           />
         </div>
-        <div className="pb-4">
+        <div>
           <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-primary)]">
             Premium unisex edit
           </p>
-          <h1 className="heading-ko mt-5 max-w-xl text-[2.75rem] md:text-[4rem]">
-            오래 입을 취향을 위한 조용한 옷들.
+          <h1 className="heading-ko mt-5 max-w-md text-[2.25rem] md:text-[3rem] xl:text-[3.25rem]">
+            오래 입는 조용한 취향.
           </h1>
-          <p className="mt-5 max-w-lg break-keep text-base leading-7 text-[var(--color-text-secondary)]">
+          <p className="mt-5 max-w-md break-keep text-sm leading-6 text-[var(--color-text-secondary)]">
             누브는 깨끗한 실루엣과 뉴트럴 톤, 계절에 맞는 에센셜을 중심으로
             유니섹스 데일리웨어를 제안합니다.
           </p>
           <Link
-            className="mt-8 inline-flex h-11 items-center justify-center gap-2 bg-[var(--color-primary)] px-5 text-sm font-medium text-white transition hover:bg-[var(--color-primary-hover)]"
+            className="mt-7 inline-flex h-11 items-center justify-center gap-2 bg-[var(--color-primary)] px-5 text-sm font-medium text-white transition hover:bg-[var(--color-primary-hover)]"
             to="/products"
           >
             Shop the edit <ArrowRight aria-hidden="true" size={18} />
