@@ -21,11 +21,17 @@ function renderRoute(initialEntry: string) {
 }
 
 describe('routes', () => {
-  it('renders the customer product route inside the customer layout', () => {
+  it('shows a customer route fallback while loading split customer pages', () => {
+    renderRoute('/products');
+
+    expect(screen.getByLabelText('Loading customer route')).toBeInTheDocument();
+  });
+
+  it('renders the customer product route inside the customer layout', async () => {
     renderRoute('/products');
 
     expect(screen.getByRole('link', { name: 'Nouve' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Products' })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Products' })).toBeInTheDocument();
   });
 
   it('renders the admin orders route inside the admin layout', async () => {

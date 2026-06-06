@@ -55,7 +55,7 @@ Nouve는 “차분한 프리미엄”을 핵심 무드로 잡았습니다. 고�
 | 영역 | 기술 | 사용 목적 |
 | --- | --- | --- |
 | Framework | React, TypeScript, Vite | 빠른 개발 환경과 타입 안정성 |
-| Routing | React Router | 고객 화면과 관리자 화면 라우팅 |
+| Routing | React Router | 고객 화면과 관리자 화면 라우팅, route-level lazy loading |
 | Server State | TanStack Query | mock service의 loading/cache 흐름 |
 | Client State | Zustand | cart, wishlist 로컬 상태와 persistence |
 | Form | React Hook Form, Zod | checkout 입력 관리와 validation |
@@ -70,6 +70,7 @@ Nouve는 “차분한 프리미엄”을 핵심 무드로 잡았습니다. 고�
 src/data              # products, orders, collections
 src/services          # async mock commerce service
 src/stores            # persisted cart/wishlist stores
+src/app/router        # FSD-lite route boundaries and lazy page chunks
 src/features/products # discovery, collection, product detail
 src/features/cart     # cart page and totals
 src/features/checkout # checkout form and order complete
