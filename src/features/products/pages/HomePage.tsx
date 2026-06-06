@@ -29,7 +29,7 @@ export function HomePage() {
             오래 입는 조용한 취향.
           </h1>
           <p className="mt-5 max-w-md break-keep text-sm leading-6 text-[var(--color-text-secondary)]">
-            누브는 깨끗한 실루엣과 뉴트럴 톤, 계절에 맞는 에센셜을 중심으로
+            누브는 깨끗한 실루엣과 뉴트럴 톤, 계절에 맞는 에센셜을 중심으로 <br />
             유니섹스 데일리웨어를 제안합니다.
           </p>
           <Link
