@@ -46,7 +46,7 @@ export function ProductFilters({ products }: ProductFiltersProps) {
   }
 
   return (
-    <aside className="border border-[var(--color-border)] bg-white p-5">
+    <aside className="min-w-0 border border-[var(--color-border)] bg-white p-5">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <SlidersHorizontal aria-hidden="true" size={18} />
@@ -87,7 +87,7 @@ export function ProductFilters({ products }: ProductFiltersProps) {
           <div className="mt-3 flex flex-wrap gap-2">
             {['in-stock', 'low-stock', 'sold-out'].map((value) => (
               <Button
-                className="h-9 px-3"
+                className="h-9 max-w-full whitespace-normal px-3"
                 key={value}
                 onClick={() => updateFilter('availability', value)}
                 variant={searchParams.get('availability') === value ? 'primary' : 'secondary'}
@@ -118,10 +118,10 @@ function FilterGroup({
       <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-text-secondary)]">
         {label}
       </p>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-3 flex min-w-0 flex-wrap gap-2">
         {values.map((value) => (
           <Button
-            className="h-9 px-3"
+            className="h-9 max-w-full whitespace-normal px-3"
             key={value}
             onClick={() => onSelect(value)}
             variant={activeValue === value ? 'primary' : 'secondary'}
@@ -133,4 +133,3 @@ function FilterGroup({
     </div>
   );
 }
-

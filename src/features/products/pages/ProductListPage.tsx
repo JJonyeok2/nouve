@@ -38,7 +38,7 @@ export function ProductListPage() {
   );
 
   return (
-    <section className="mx-auto max-w-7xl px-5 py-12">
+    <section className="mx-0 w-screen max-w-none overflow-hidden px-5 py-12 md:mx-auto md:max-w-7xl">
       <div className="flex flex-col gap-6 border-b border-[var(--color-border)] pb-8 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)]">
@@ -53,9 +53,9 @@ export function ProductListPage() {
         <ProductSortControl />
       </div>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-[280px_1fr]">
+      <div className="mt-8 grid min-w-0 gap-8 lg:grid-cols-[280px_1fr]">
         <ProductFilters products={products} />
-        <div>
+        <div className="min-w-0">
           <div className="mb-5 flex items-center justify-between gap-4">
             <p className="text-sm text-[var(--color-text-secondary)]">
               {productsQuery.isLoading ? 'Loading selection' : `${visibleProducts.length} items`}

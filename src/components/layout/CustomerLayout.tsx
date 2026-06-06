@@ -9,9 +9,9 @@ const customerLinks = [
 
 export function CustomerLayout() {
   return (
-    <div className="min-h-screen bg-[var(--color-page)] text-[var(--color-text-primary)]">
-      <header className="sticky top-0 z-10 border-b border-[var(--color-border)] bg-white/95 backdrop-blur">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5">
+    <div className="min-h-screen overflow-x-hidden bg-[var(--color-page)] text-[var(--color-text-primary)]">
+      <header className="sticky top-0 left-0 right-0 z-10 w-screen border-b border-[var(--color-border)] bg-white/95 backdrop-blur">
+        <div className="mx-0 flex h-16 w-screen max-w-none items-center justify-between px-5 md:mx-auto md:max-w-7xl">
           <Link className="text-xl font-semibold tracking-wide" to="/">
             Nouve
           </Link>
@@ -59,4 +59,3 @@ export function CustomerLayout() {
     </div>
   );
 }
-

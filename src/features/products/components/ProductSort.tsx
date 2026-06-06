@@ -19,10 +19,10 @@ export function ProductSort() {
   }
 
   return (
-    <label className="grid gap-2 text-sm text-[var(--color-text-secondary)]">
+    <label className="grid w-full gap-2 text-sm text-[var(--color-text-secondary)] md:w-auto">
       Sort
       <select
-        className="h-11 border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-text-primary)] outline-none focus:border-[var(--color-primary)]"
+        className="h-11 w-full min-w-0 border border-[var(--color-border)] bg-white px-3 text-sm text-[var(--color-text-primary)] outline-none focus:border-[var(--color-primary)] md:min-w-52"
         onChange={(event) => handleSortChange(event.target.value)}
         value={currentSort}
       >
@@ -35,4 +35,3 @@ export function ProductSort() {
     </label>
   );
 }
-
