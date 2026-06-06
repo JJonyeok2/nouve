@@ -2,14 +2,16 @@ import type { RouteObject } from 'react-router-dom';
 import { createBrowserRouter } from 'react-router-dom';
 import { AdminLayout } from '../../components/layout/AdminLayout';
 import { CustomerLayout } from '../../components/layout/CustomerLayout';
+import { HomePage } from '../../features/products/pages/HomePage';
+import { ProductListPage } from '../../features/products/pages/ProductListPage';
 import { AdminHeading, PageHeading } from './RoutePlaceholders';
 
 export const routes: RouteObject[] = [
   {
     element: <CustomerLayout />,
     children: [
-      { element: <PageHeading eyebrow="Season edit" title="Home" />, path: '/' },
-      { element: <PageHeading eyebrow="Catalog" title="Products" />, path: '/products' },
+      { element: <HomePage />, path: '/' },
+      { element: <ProductListPage />, path: '/products' },
       {
         element: <PageHeading eyebrow="Product detail" title="Product Detail" />,
         path: '/products/:productId',
