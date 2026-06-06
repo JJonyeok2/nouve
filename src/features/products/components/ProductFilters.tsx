@@ -3,8 +3,10 @@ import { useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '../../../components/ui/Button';
 import type { Product } from '../../../types/commerce';
+import { cn } from '../../../utils/cn';
 
 type ProductFiltersProps = {
+  className?: string;
   products: Product[];
 };
 
@@ -12,7 +14,7 @@ function uniqueSorted(values: string[]) {
   return Array.from(new Set(values)).sort((left, right) => left.localeCompare(right));
 }
 
-export function ProductFilters({ products }: ProductFiltersProps) {
+export function ProductFilters({ className, products }: ProductFiltersProps) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const filters = useMemo(
@@ -46,7 +48,7 @@ export function ProductFilters({ products }: ProductFiltersProps) {
   }
 
   return (
-    <aside className="min-w-0 border border-[var(--color-border)] bg-white p-5">
+    <aside className={cn('min-w-0 border border-[var(--color-border)] bg-white p-5', className)}>
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <SlidersHorizontal aria-hidden="true" size={18} />

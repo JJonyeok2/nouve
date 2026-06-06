@@ -1,5 +1,6 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { render, screen, waitForElementToBeRemoved } from '@testing-library/react';
+import { render, screen, waitForElementToBeRemoved, within } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { ProductListPage } from './ProductListPage';
 
@@ -39,5 +40,23 @@ describe('ProductListPage', () => {
     expect(screen.getByRole('link', { name: /Ivory Structured Woven Shirt/i })).toBeInTheDocument();
     expect(screen.queryByRole('link', { name: /Charcoal Wide Trousers/i })).not.toBeInTheDocument();
   });
-});
 
+  it('opens a mobile filter drawer and applies filters from it', async () => {
+    const user = userEvent.setup();
+    renderProductList();
+
+    await waitForElementToBeRemoved(() => screen.getByLabelText('Loading products'));
+
+    expect(screen.queryByRole('dialog', { name: 'Product filters' })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole('button', { name: 'Open filters' }));
+
+    const drawer = screen.getByRole('dialog', { name: 'Product filters' });
+    await user.click(within(drawer).getByRole('button', { name: 'Shirts' }));
+    await user.click(within(drawer).getByRole('button', { name: /Show results/i }));
+
+    expect(drawer).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Ivory Structured Woven Shirt/i })).toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: /Charcoal Wide Trousers/i })).not.toBeInTheDocument();
+  });
+});
