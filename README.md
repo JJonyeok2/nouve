@@ -56,6 +56,12 @@ npm run build
 
 Current automated coverage includes product filtering, service updates, routing, cart/wishlist stores, product detail, cart totals, checkout validation/submission, admin visibility/status updates, and local asset path integrity.
 
+## Development Workflow
+
+- Keep README content aligned with the current feature set, screenshots, run commands, and mock architecture.
+- Commit work in functional atomic units, for example product discovery, cart/wishlist, checkout, admin, image assets, and documentation polish.
+- Before pushing, run the project verification commands and push the completed feature branch after the atomic commits are in place.
+
 ## Future Improvements
 
 - Product image set expansion so every mock product has a unique image
