@@ -19,10 +19,13 @@ This file is the source of truth for all agents working on Nouve.
 - Treat local mock data and service functions as the API boundary.
 - Use React, TypeScript, Vite, React Router, TanStack Query, Zustand, React Hook Form, Zod, Tailwind CSS, Recharts, and lucide-react unless a later approved plan changes this.
 - Customer UI must feel premium, minimal, image-led, and usable.
+- Large customer-facing headlines and descriptive body copy should be Korean; small labels, eyebrows, table headings, and terse control text may remain English when it fits the brand.
 - Admin UI must feel efficient, table-first, and task-focused.
 - Images must be downloaded or generated into the approved local asset folder. Do not hotlink production UI images from third-party sites.
 - Agents must not revert changes made by the user or by other agents.
 - Agents must keep write scopes bounded and report changed files.
+- Keep the project README updated when implementation changes affect portfolio positioning, run commands, screenshots, architecture, or main flows.
+- When development work is complete, commit by functional atomic units and push only after verification succeeds.
 
 ## Approved Agent Roles
 
@@ -62,4 +65,3 @@ Agents should load only the context needed for their role:
 Use `public/assets/nouve/` as the single local staging and serving folder for project imagery.
 
 Record image source, license, filename, and usage in `docs/assets/image-sources.md`.
-
