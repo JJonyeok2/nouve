@@ -72,8 +72,8 @@ export function ProductDetailPage() {
               Back to products
             </Link>
           }
-          description="This product may be hidden, archived, or no longer available."
-          title="Product not found"
+          description="상품이 숨김 처리되었거나 더 이상 판매되지 않을 수 있습니다."
+          title="상품을 찾을 수 없습니다"
         />
       </section>
     );
@@ -156,7 +156,7 @@ export function ProductDetailPage() {
             </Badge>
           </div>
 
-          <p className="mt-6 text-sm leading-7 text-[var(--color-text-secondary)]">
+          <p className="mt-6 break-keep text-sm leading-7 text-[var(--color-text-secondary)]">
             {product.description}
           </p>
 
@@ -226,7 +226,7 @@ export function ProductDetailPage() {
               onClick={handleAddToCart}
               type="button"
             >
-              {addedSize === selectedSize ? <Check aria-hidden="true" size={18} /> : <ShoppingBag aria-hidden="true" size={18} />}
+              {addedSize !== undefined && addedSize === selectedSize ? <Check aria-hidden="true" size={18} /> : <ShoppingBag aria-hidden="true" size={18} />}
               Add to cart
             </Button>
             <Link

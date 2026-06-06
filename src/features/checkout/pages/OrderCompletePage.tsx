@@ -20,8 +20,8 @@ export function OrderCompletePage() {
               Continue shopping
             </Link>
           }
-          description="Recent mock order data is only kept during the current checkout navigation."
-          title="No recent order"
+          description="Mock 주문 정보는 현재 결제 이동 흐름 안에서만 유지됩니다."
+          title="최근 주문 정보가 없습니다"
         />
       </section>
     );
@@ -49,8 +49,8 @@ export function OrderCompletePage() {
               {orderSummary.orderId}
             </p>
             <h1 className="mt-3 text-4xl font-semibold">Order Complete</h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--color-text-secondary)]">
-              Your mock order has been created locally. No payment was processed.
+            <p className="mt-3 max-w-2xl break-keep text-sm leading-6 text-[var(--color-text-secondary)]">
+              로컬에서 Mock 주문이 생성되었습니다. 실제 결제는 진행되지 않았습니다.
             </p>
           </div>
 

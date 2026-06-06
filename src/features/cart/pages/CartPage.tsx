@@ -33,8 +33,8 @@ export function CartPage() {
               Shop products
             </Link>
           }
-          description="Add a product from the collection to review checkout details."
-          title="Your bag is empty"
+          description="컬렉션에서 상품을 담으면 결제 정보를 확인할 수 있습니다."
+          title="장바구니가 비어 있습니다"
         />
       </section>
     );
@@ -158,8 +158,9 @@ export function CartPage() {
           >
             Continue to checkout
           </Link>
-          <p className="mt-4 text-xs leading-5 text-[var(--color-text-secondary)]">
-            Mock checkout uses local cart data only. Shipping and coupon values are simulated.
+          <p className="mt-4 break-keep text-xs leading-5 text-[var(--color-text-secondary)]">
+            Mock checkout은 로컬 장바구니 데이터만 사용하며, 배송비와 쿠폰 값은
+            데모용으로 계산됩니다.
           </p>
         </aside>
       </div>

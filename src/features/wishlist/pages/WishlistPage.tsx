@@ -66,8 +66,8 @@ export function WishlistPage() {
                 Browse products
               </Link>
             }
-            description="Save product edits while browsing and return here before checkout."
-            title="No saved products yet"
+            description="상품을 둘러보며 마음에 드는 아이템을 저장한 뒤 다시 확인해보세요."
+            title="저장한 상품이 없습니다"
           />
         </div>
       )}

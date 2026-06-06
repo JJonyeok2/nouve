@@ -13,7 +13,7 @@ export function CollectionSection({ collections }: CollectionSectionProps) {
           <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)]">
             Curated edits
           </p>
-          <h2 className="mt-3 text-3xl font-semibold">Seasonal collections</h2>
+          <h2 className="mt-3 break-keep text-3xl font-semibold">계절을 위한 컬렉션</h2>
         </div>
         <Link className="hidden text-sm text-[var(--color-primary)] md:inline" to="/products">
           Shop all
@@ -44,4 +44,3 @@ export function CollectionSection({ collections }: CollectionSectionProps) {
     </section>
   );
 }
-

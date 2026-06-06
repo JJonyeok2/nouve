@@ -68,8 +68,8 @@ export function CheckoutPage() {
               Shop products
             </Link>
           }
-          description="Add products to your bag before starting the mock checkout."
-          title="Your bag is empty"
+          description="Mock checkout을 시작하려면 먼저 상품을 장바구니에 담아주세요."
+          title="장바구니가 비어 있습니다"
         />
       </section>
     );

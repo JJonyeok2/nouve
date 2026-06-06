@@ -25,12 +25,12 @@ export function HomePage() {
           <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-primary)]">
             Premium unisex edit
           </p>
-          <h1 className="mt-5 max-w-xl text-5xl font-semibold leading-tight md:text-6xl">
-            Quiet pieces for a considered wardrobe.
+          <h1 className="mt-5 max-w-xl break-keep text-5xl font-semibold leading-tight md:text-6xl">
+            오래 입을 취향을 위한 조용한 옷들.
           </h1>
-          <p className="mt-5 max-w-lg text-base leading-7 text-[var(--color-text-secondary)]">
-            Nouve curates clean silhouettes, neutral tones, and season-ready essentials
-            for unisex daily wear.
+          <p className="mt-5 max-w-lg break-keep text-base leading-7 text-[var(--color-text-secondary)]">
+            누브는 깨끗한 실루엣과 뉴트럴 톤, 계절에 맞는 에센셜을 중심으로
+            유니섹스 데일리웨어를 제안합니다.
           </p>
           <Link
             className="mt-8 inline-flex h-11 items-center justify-center gap-2 bg-[var(--color-primary)] px-5 text-sm font-medium text-white transition hover:bg-[var(--color-primary-hover)]"
@@ -47,7 +47,7 @@ export function HomePage() {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)]">
               New arrivals
             </p>
-            <h2 className="mt-3 text-3xl font-semibold">Freshly selected</h2>
+            <h2 className="mt-3 break-keep text-3xl font-semibold">새롭게 고른 셀렉션</h2>
           </div>
           <Link className="text-sm text-[var(--color-primary)]" to="/products?sort=newest">
             View all

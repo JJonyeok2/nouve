@@ -45,9 +45,9 @@ export function ProductListPage() {
             Catalog
           </p>
           <h1 className="mt-3 text-4xl font-semibold">Products</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--color-text-secondary)]">
-            Browse premium unisex essentials by silhouette, material, size, and stock
-            availability.
+          <p className="mt-3 max-w-2xl break-keep text-sm leading-6 text-[var(--color-text-secondary)]">
+            실루엣, 소재, 사이즈, 재고 상태를 기준으로 프리미엄 유니섹스
+            에센셜을 탐색해보세요.
           </p>
         </div>
         <ProductSortControl />
@@ -80,8 +80,8 @@ export function ProductListPage() {
             </div>
           ) : (
             <EmptyState
-              description="Try clearing a filter or selecting a broader size range."
-              title="No products match these filters"
+              description="필터를 줄이거나 더 넓은 사이즈 범위를 선택해보세요."
+              title="조건에 맞는 상품이 없습니다"
             />
           )}
         </div>

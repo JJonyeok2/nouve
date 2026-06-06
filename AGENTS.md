@@ -19,6 +19,7 @@ This file is the source of truth for all agents working on Nouve.
 - Treat local mock data and service functions as the API boundary.
 - Use React, TypeScript, Vite, React Router, TanStack Query, Zustand, React Hook Form, Zod, Tailwind CSS, Recharts, and lucide-react unless a later approved plan changes this.
 - Customer UI must feel premium, minimal, image-led, and usable.
+- Large customer-facing headlines and descriptive body copy should be Korean; small labels, eyebrows, table headings, and terse control text may remain English when it fits the brand.
 - Admin UI must feel efficient, table-first, and task-focused.
 - Images must be downloaded or generated into the approved local asset folder. Do not hotlink production UI images from third-party sites.
 - Agents must not revert changes made by the user or by other agents.

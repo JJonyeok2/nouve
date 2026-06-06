@@ -52,8 +52,8 @@ export function CustomerLayout() {
         <Outlet />
       </main>
       <footer className="border-t border-[var(--color-border)] bg-white px-5 py-10">
-        <div className="mx-auto max-w-7xl text-sm text-[var(--color-text-secondary)]">
-          Premium unisex minimalwear for quiet daily repetition.
+        <div className="mx-auto max-w-7xl break-keep text-sm text-[var(--color-text-secondary)]">
+          조용한 일상을 위한 프리미엄 유니섹스 미니멀웨어.
         </div>
       </footer>
     </div>
