@@ -28,10 +28,10 @@ describe('routes', () => {
     expect(screen.getByRole('heading', { name: 'Products' })).toBeInTheDocument();
   });
 
-  it('renders the admin orders route inside the admin layout', () => {
+  it('renders the admin orders route inside the admin layout', async () => {
     renderRoute('/admin/orders');
 
     expect(screen.getByRole('navigation', { name: 'Admin navigation' })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Orders' })).toBeInTheDocument();
+    expect(await screen.findByRole('heading', { name: 'Orders' })).toBeInTheDocument();
   });
 });

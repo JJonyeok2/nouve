@@ -9,7 +9,12 @@ import { HomePage } from '../../features/products/pages/HomePage';
 import { ProductDetailPage } from '../../features/products/pages/ProductDetailPage';
 import { ProductListPage } from '../../features/products/pages/ProductListPage';
 import { WishlistPage } from '../../features/wishlist/pages/WishlistPage';
-import { AdminHeading } from './RoutePlaceholders';
+import {
+  LazyAdminDashboardPage,
+  LazyAdminInventoryPage,
+  LazyAdminOrdersPage,
+  LazyAdminProductsPage,
+} from './LazyAdminPages';
 
 export const routes: RouteObject[] = [
   {
@@ -28,10 +33,10 @@ export const routes: RouteObject[] = [
     element: <AdminLayout />,
     path: '/admin',
     children: [
-      { element: <AdminHeading title="Dashboard" />, index: true },
-      { element: <AdminHeading title="Products" />, path: 'products' },
-      { element: <AdminHeading title="Orders" />, path: 'orders' },
-      { element: <AdminHeading title="Inventory" />, path: 'inventory' },
+      { element: <LazyAdminDashboardPage />, index: true },
+      { element: <LazyAdminProductsPage />, path: 'products' },
+      { element: <LazyAdminOrdersPage />, path: 'orders' },
+      { element: <LazyAdminInventoryPage />, path: 'inventory' },
     ],
   },
 ];
