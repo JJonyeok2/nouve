@@ -25,7 +25,7 @@ export function HomePage() {
           <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-primary)]">
             Premium unisex edit
           </p>
-          <h1 className="mt-5 max-w-xl break-keep text-5xl font-semibold leading-tight md:text-6xl">
+          <h1 className="heading-ko mt-5 max-w-xl text-[2.75rem] md:text-[4rem]">
             오래 입을 취향을 위한 조용한 옷들.
           </h1>
           <p className="mt-5 max-w-lg break-keep text-base leading-7 text-[var(--color-text-secondary)]">
@@ -47,7 +47,7 @@ export function HomePage() {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)]">
               New arrivals
             </p>
-            <h2 className="mt-3 break-keep text-3xl font-semibold">새롭게 고른 셀렉션</h2>
+            <h2 className="heading-ko mt-3 text-[1.85rem] md:text-3xl">새롭게 고른 셀렉션</h2>
           </div>
           <Link className="text-sm text-[var(--color-primary)]" to="/products?sort=newest">
             View all
